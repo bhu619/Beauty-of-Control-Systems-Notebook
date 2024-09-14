@@ -32,7 +32,7 @@ function [E, H] = MPC_Matrices(A, B, Q, R, F, N)
 
     % Calculate G, E, H
     G = M' * Q_bar * M; % G: n x n
-    E = M' * Q_bar * C; % E: NP x n
+    E = M' * Q_bar * C; % E: n x NP
     H = C' * Q_bar * C + R_bar; % H: NP x NP
 
     % 强制H为对称矩阵
